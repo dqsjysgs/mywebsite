@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZBL - 个人主页</title>
+  <title>ZBL - Personal Website</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -12,6 +12,35 @@
       color: #1a1a2e;
       background: #fafafa;
       line-height: 1.7;
+    }
+
+    /* Language Toggle */
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 8px;
+    }
+    .lang-btn {
+      padding: 8px 16px;
+      border: 2px solid rgba(255,255,255,.5);
+      background: transparent;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: .9rem;
+      font-weight: 600;
+      transition: all .2s;
+    }
+    .lang-btn:hover {
+      background: rgba(255,255,255,.1);
+    }
+    .lang-btn.active {
+      background: #fff;
+      color: #6c5ce7;
+      border-color: #fff;
     }
 
     /* Hero */
@@ -145,60 +174,81 @@
       color: #999;
       font-size: .9rem;
     }
-    footer a { color: #6c5ce7; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+
+    /* Hide/show language */
+    [data-lang="en"] { display: none; }
+    body.lang-en [data-lang="zh"] { display: none; }
+    body.lang-en [data-lang="en"] { display: block; }
+    body.lang-en .tag[data-lang="en"] { display: inline-block; }
+    body.lang-en .tag[data-lang="zh"] { display: none; }
   </style>
 </head>
 <body>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
 
   <!-- Hero -->
   <div class="hero">
     <div class="avatar">&#128104;&#8205;&#128187;</div>
     <h1>ZBL</h1>
-    <p>热爱技术，享受用代码解决问题的过程。对 AI 与大模型的发展充满好奇，正在信息学竞赛的道路上不断探索。</p>
-    <div class="tagline">Python &middot; C++ &middot; 算法竞赛 &middot; AI</div>
+    <p data-lang="zh">热爱技术，享受用代码解决问题的过程。对 AI 与大模型的发展充满好奇，正在信息学竞赛的道路上不断探索。</p>
+    <p data-lang="en">Passionate about technology and solving problems with code. Curious about AI and large language models, exploring the world of competitive programming.</p>
+    <div class="tagline">Python &middot; C++ &middot; OI &middot; AI</div>
   </div>
 
   <!-- About -->
   <section>
-    <h2>关于我</h2>
+    <h2 data-lang="zh">关于我</h2>
+    <h2 data-lang="en">About Me</h2>
     <div class="skills">
       <div class="card">
         <div class="icon">&#128187;</div>
-        <h3>编程</h3>
-        <p>熟悉 Python 和 C++，喜欢用代码实现想法，解决实际问题。享受编程带来的创造感和成就感。</p>
+        <h3 data-lang="zh">编程</h3>
+        <h3 data-lang="en">Programming</h3>
+        <p data-lang="zh">熟悉 Python 和 C++，喜欢用代码实现想法，解决实际问题。享受编程带来的创造感和成就感。</p>
+        <p data-lang="en">Proficient in Python and C++. Love turning ideas into code and solving real-world problems. Enjoy the creativity and satisfaction of programming.</p>
       </div>
       <div class="card">
         <div class="icon">&#127942;</div>
-        <h3>信息学竞赛</h3>
-        <p>对算法和数据结构充满热情，在 OI 的世界里不断挑战自我，追求更优的解题思路。</p>
+        <h3 data-lang="zh">信息学竞赛</h3>
+        <h3 data-lang="en">Competitive Programming</h3>
+        <p data-lang="zh">对算法和数据结构充满热情，在 OI 的世界里不断挑战自我，追求更优的解题思路。</p>
+        <p data-lang="en">Passionate about algorithms and data structures. Constantly challenging myself in the world of OI, striving for optimal solutions.</p>
       </div>
       <div class="card">
         <div class="icon">&#129302;</div>
-        <h3>AI & 大模型</h3>
-        <p>关注人工智能前沿发展，尤其是大语言模型的演进。好奇 AI 将如何改变世界，也想参与其中。</p>
+        <h3>AI & LLM</h3>
+        <p data-lang="zh">关注人工智能前沿发展，尤其是大语言模型的演进。好奇 AI 将如何改变世界，也想参与其中。</p>
+        <p data-lang="en">Following the cutting edge of AI, especially the evolution of large language models. Curious about how AI will transform the world — and eager to be part of it.</p>
       </div>
       <div class="card">
         <div class="icon">&#128218;</div>
-        <h3>持续学习</h3>
-        <p>保持好奇心，不断探索新技术。相信学习是一场没有终点的旅程。</p>
+        <h3 data-lang="zh">持续学习</h3>
+        <h3 data-lang="en">Lifelong Learner</h3>
+        <p data-lang="zh">保持好奇心，不断探索新技术。相信学习是一场没有终点的旅程。</p>
+        <p data-lang="en">Stay curious, keep exploring new technologies. Believe that learning is a journey without an end.</p>
       </div>
     </div>
   </section>
 
   <!-- Code Example -->
   <section>
-    <h2>代码风格</h2>
+    <h2 data-lang="zh">代码风格</h2>
+    <h2 data-lang="en">Code Style</h2>
     <div class="code-section">
-      <span class="comment">// 用代码表达热爱</span><br><br>
+      <span class="comment">// Express passion with code</span><br><br>
       <span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span><br>
       <span class="keyword">#include</span> <span class="string">&lt;vector&gt;</span><br>
       <span class="keyword">#include</span> <span class="string">&lt;algorithm&gt;</span><br><br>
       <span class="keyword">using namespace</span> std;<br><br>
       <span class="keyword">int</span> <span class="func">main</span>() {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;vector&lt;<span class="keyword">string</span>&gt; interests = {<span class="string">"算法"</span>, <span class="string">"AI"</span>, <span class="string">"大模型"</span>};<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;vector&lt;<span class="keyword">string</span>&gt; interests = {<span class="string">"Algorithms"</span>, <span class="string">"AI"</span>, <span class="string">"LLM"</span>};<br>
       &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; s : interests)<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span class="string">"热爱: "</span> &lt;&lt; s &lt;&lt; endl;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span class="string">"Passion: "</span> &lt;&lt; s &lt;&lt; endl;<br>
       &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="builtin">0</span>;<br>
       }
     </div>
@@ -206,41 +256,64 @@
 
   <!-- Music -->
   <section>
-    <h2>音乐品味</h2>
+    <h2 data-lang="zh">音乐品味</h2>
+    <h2 data-lang="en">Music Taste</h2>
     <div class="music">
       <div class="music-card">
         <div class="artist-icon">&#127908;</div>
-        <h3>吴青峰</h3>
-        <p>细腻的词曲创作，温柔而有力量的嗓音。每一首歌都像一首诗。</p>
+        <h3>吴青峰 / Wu Qingfeng</h3>
+        <p data-lang="zh">细腻的词曲创作，温柔而有力量的嗓音。每一首歌都像一首诗。</p>
+        <p data-lang="en">Delicate songwriting with a gentle yet powerful voice. Every song feels like a poem.</p>
       </div>
       <div class="music-card">
         <div class="artist-icon">&#127926;</div>
-        <h3>周深</h3>
-        <p>空灵清澈的声线，跨越语言与风格的界限。用声音讲述故事。</p>
+        <h3>周深 / Zhou Shen</h3>
+        <p data-lang="zh">空灵清澈的声线，跨越语言与风格的界限。用声音讲述故事。</p>
+        <p data-lang="en">An ethereal, crystal-clear voice that transcends languages and genres. Telling stories through sound.</p>
       </div>
     </div>
   </section>
 
   <!-- Tags -->
   <section>
-    <h2>兴趣标签</h2>
+    <h2 data-lang="zh">兴趣标签</h2>
+    <h2 data-lang="en">Interests</h2>
     <div class="tags">
-      <div class="tag">&#128187; 编程</div>
-      <div class="tag">&#127942; 信息学竞赛</div>
-      <div class="tag">&#128013; Python</div>
-      <div class="tag">&#9881;&#65039; C++</div>
-      <div class="tag">&#129302; AI</div>
-      <div class="tag">&#129504; 大模型</div>
-      <div class="tag">&#128640; 算法</div>
-      <div class="tag">&#127925; 吴青峰</div>
-      <div class="tag">&#127926; 周深</div>
+      <div class="tag" data-lang="zh">&#128187; 编程</div>
+      <div class="tag" data-lang="zh">&#127942; 信息学竞赛</div>
+      <div class="tag" data-lang="zh">&#128013; Python</div>
+      <div class="tag" data-lang="zh">&#9881;&#65039; C++</div>
+      <div class="tag" data-lang="zh">&#129302; AI</div>
+      <div class="tag" data-lang="zh">&#129504; 大模型</div>
+      <div class="tag" data-lang="zh">&#128640; 算法</div>
+      <div class="tag" data-lang="zh">&#127925; 吴青峰</div>
+      <div class="tag" data-lang="zh">&#127926; 周深</div>
+
+      <div class="tag" data-lang="en">&#128187; Programming</div>
+      <div class="tag" data-lang="en">&#127942; Competitive Programming</div>
+      <div class="tag" data-lang="en">&#128013; Python</div>
+      <div class="tag" data-lang="en">&#9881;&#65039; C++</div>
+      <div class="tag" data-lang="en">&#129302; AI</div>
+      <div class="tag" data-lang="en">&#129504; LLM</div>
+      <div class="tag" data-lang="en">&#128640; Algorithms</div>
+      <div class="tag" data-lang="en">&#127925; Wu Qingfeng</div>
+      <div class="tag" data-lang="en">&#127926; Zhou Shen</div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 ZBL &middot; 用热爱构建</p>
+    <p>&copy; 2026 ZBL &middot; Built with Passion</p>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = lang === 'en' ? 'lang-en' : '';
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === (lang === 'en' ? 'EN' : '中文'));
+      });
+    }
+  </script>
 
 </body>
 </html>
