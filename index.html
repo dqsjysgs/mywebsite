@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python - 简洁而强大的编程语言</title>
+  <title>ZBL - 个人主页</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -16,7 +16,7 @@
 
     /* Hero */
     .hero {
-      background: linear-gradient(135deg, #306998, #FFD43B);
+      background: linear-gradient(135deg, #2d3a4a, #6c5ce7);
       color: #fff;
       text-align: center;
       padding: 100px 20px 80px;
@@ -27,7 +27,7 @@
       margin-bottom: 16px;
       letter-spacing: -1px;
     }
-    .hero .logo {
+    .hero .avatar {
       font-size: 5rem;
       margin-bottom: 20px;
     }
@@ -37,20 +37,13 @@
       margin: 0 auto 32px;
       opacity: .92;
     }
-    .hero .btn {
+    .hero .tagline {
       display: inline-block;
-      padding: 14px 36px;
-      background: #fff;
-      color: #306998;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.05rem;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .hero .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.18);
+      padding: 8px 20px;
+      background: rgba(255,255,255,.15);
+      border-radius: 20px;
+      font-size: .95rem;
+      margin-top: 8px;
     }
 
     /* Section */
@@ -64,11 +57,11 @@
       font-weight: 700;
       text-align: center;
       margin-bottom: 48px;
-      color: #306998;
+      color: #6c5ce7;
     }
 
-    /* Features */
-    .features {
+    /* Skills */
+    .skills {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 32px;
@@ -107,36 +100,39 @@
     .code-section .func { color: #dcdcaa; }
     .code-section .builtin { color: #4ec9b0; }
 
-    /* Stats */
-    .stats {
+    /* Music */
+    .music {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .music-card {
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      color: #fff;
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .music-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(108,92,231,.3);
+    }
+    .music-card .artist-icon { font-size: 3rem; margin-bottom: 16px; }
+    .music-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .music-card p { font-size: .95rem; opacity: .9; }
+
+    /* Tags */
+    .tags {
       display: flex;
       justify-content: center;
-      gap: 64px;
       flex-wrap: wrap;
-      text-align: center;
+      gap: 16px;
     }
-    .stat-item .num {
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: #306998;
-    }
-    .stat-item .label {
-      font-size: .95rem;
-      color: #777;
-      margin-top: 4px;
-    }
-
-    /* Use Cases */
-    .use-cases {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .use-tag {
-      background: linear-gradient(135deg, #306998, #4b8bbe);
+    .tag {
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
       color: #fff;
-      text-align: center;
-      padding: 24px 16px;
+      padding: 14px 28px;
       border-radius: 10px;
       font-weight: 600;
       font-size: 1rem;
@@ -149,7 +145,7 @@
       color: #999;
       font-size: .9rem;
     }
-    footer a { color: #306998; text-decoration: none; }
+    footer a { color: #6c5ce7; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -157,95 +153,86 @@
 
   <!-- Hero -->
   <div class="hero">
-    <div class="logo">&#128013;</div>
-    <h1>Python</h1>
-    <p>简洁、优雅、强大。Python 是世界上最受欢迎的编程语言之一，让编程变得简单而有趣。</p>
-    <a href="https://www.python.org/" class="btn" target="_blank">访问官网</a>
+    <div class="avatar">&#128104;&#8205;&#128187;</div>
+    <h1>ZBL</h1>
+    <p>热爱技术，享受用代码解决问题的过程。正在信息学竞赛的道路上不断探索。</p>
+    <div class="tagline">Python &middot; C++ &middot; 算法竞赛</div>
   </div>
 
-  <!-- Features -->
+  <!-- About -->
   <section>
-    <h2>为什么选择 Python？</h2>
-    <div class="features">
+    <h2>关于我</h2>
+    <div class="skills">
       <div class="card">
-        <div class="icon">&#128640;</div>
-        <h3>易于学习</h3>
-        <p>语法接近自然英语，清晰直观。非常适合编程初学者入门，也能满足专业开发者的需求。</p>
+        <div class="icon">&#128187;</div>
+        <h3>编程</h3>
+        <p>熟悉 Python 和 C++，喜欢用代码实现想法，解决实际问题。享受编程带来的创造感和成就感。</p>
       </div>
       <div class="card">
-        <div class="icon">&#128230;</div>
-        <h3>丰富的生态</h3>
-        <p>拥有超过 40 万个第三方库，覆盖 Web 开发、数据分析、人工智能、自动化等各个领域。</p>
+        <div class="icon">&#127942;</div>
+        <h3>信息学竞赛</h3>
+        <p>对算法和数据结构充满热情，在 OI 的世界里不断挑战自我，追求更优的解题思路。</p>
       </div>
       <div class="card">
-        <div class="icon">&#127758;</div>
-        <h3>跨平台</h3>
-        <p>一次编写，处处运行。支持 Windows、macOS、Linux 等主流操作系统，无需修改代码。</p>
-      </div>
-      <div class="card">
-        <div class="icon">&#129309;</div>
-        <h3>活跃社区</h3>
-        <p>全球数百万开发者组成的社区，丰富的文档、教程和开源项目，遇到问题总能找到答案。</p>
+        <div class="icon">&#128218;</div>
+        <h3>持续学习</h3>
+        <p>保持好奇心，不断探索新技术。相信学习是一场没有终点的旅程。</p>
       </div>
     </div>
   </section>
 
   <!-- Code Example -->
   <section>
-    <h2>代码示例</h2>
+    <h2>代码风格</h2>
     <div class="code-section">
-      <span class="comment"># 一个简单的 Python 程序</span><br><br>
-      <span class="keyword">def</span> <span class="func">greet</span>(name):<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">f"你好, {name}! 欢迎来到 Python 的世界。"</span><br><br>
-      <span class="comment"># 列表推导式 —— 简洁而优雅</span><br>
-      squares = [x ** <span class="builtin">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="builtin">range</span>(<span class="builtin">10</span>)]<br><br>
-      <span class="builtin">print</span>(greet(<span class="string">"开发者"</span>))<br>
-      <span class="builtin">print</span>(squares)
+      <span class="comment">// 用代码表达热爱</span><br><br>
+      <span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span><br>
+      <span class="keyword">#include</span> <span class="string">&lt;vector&gt;</span><br>
+      <span class="keyword">#include</span> <span class="string">&lt;algorithm&gt;</span><br><br>
+      <span class="keyword">using namespace</span> std;<br><br>
+      <span class="keyword">int</span> <span class="func">main</span>() {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;vector&lt;<span class="keyword">string</span>&gt; interests = {<span class="string">"算法"</span>, <span class="string">"Python"</span>, <span class="string">"C++"</span>};<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; s : interests)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span class="string">"热爱: "</span> &lt;&lt; s &lt;&lt; endl;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="builtin">0</span>;<br>
+      }
     </div>
   </section>
 
-  <!-- Stats -->
+  <!-- Music -->
   <section>
-    <h2>Python 的影响力</h2>
-    <div class="stats">
-      <div class="stat-item">
-        <div class="num">#1</div>
-        <div class="label">TIOBE 编程语言指数</div>
+    <h2>音乐品味</h2>
+    <div class="music">
+      <div class="music-card">
+        <div class="artist-icon">&#127908;</div>
+        <h3>吴青峰</h3>
+        <p>细腻的词曲创作，温柔而有力量的嗓音。每一首歌都像一首诗。</p>
       </div>
-      <div class="stat-item">
-        <div class="num">15M+</div>
-        <div class="label">全球开发者</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">400K+</div>
-        <div class="label">PyPI 包数量</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">34</div>
-        <div class="label">年历史 (1991)</div>
+      <div class="music-card">
+        <div class="artist-icon">&#127926;</div>
+        <h3>周深</h3>
+        <p>空灵清澈的声线，跨越语言与风格的界限。用声音讲述故事。</p>
       </div>
     </div>
   </section>
 
-  <!-- Use Cases -->
+  <!-- Tags -->
   <section>
-    <h2>应用领域</h2>
-    <div class="use-cases">
-      <div class="use-tag">&#129302; 人工智能 & 机器学习</div>
-      <div class="use-tag">&#128202; 数据分析 & 可视化</div>
-      <div class="use-tag">&#127760; Web 后端开发</div>
-      <div class="use-tag">&#128268; 网络爬虫</div>
-      <div class="use-tag">&#128295; 自动化运维</div>
-      <div class="use-tag">&#128272; 网络安全</div>
-      <div class="use-tag">&#127918; 游戏开发</div>
-      <div class="use-tag">&#128200; 量化交易</div>
+    <h2>兴趣标签</h2>
+    <div class="tags">
+      <div class="tag">&#128187; 编程</div>
+      <div class="tag">&#127942; 信息学竞赛</div>
+      <div class="tag">&#128013; Python</div>
+      <div class="tag">&#9881;&#65039; C++</div>
+      <div class="tag">&#128640; 算法</div>
+      <div class="tag">&#127925; 吴青峰</div>
+      <div class="tag">&#127926; 周深</div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Python 是 <a href="https://www.python.org/psf/" target="_blank">Python Software Foundation</a> 的注册商标</p>
-    <p style="margin-top:8px;">用热爱构建 &hearts;</p>
+    <p>&copy; 2026 ZBL &middot; 用热爱构建</p>
   </footer>
 
 </body>
