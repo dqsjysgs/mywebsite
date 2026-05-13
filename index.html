@@ -92,8 +92,8 @@
     /* Skills */
     .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
     }
     .card {
       background: #fff;
@@ -165,6 +165,43 @@
       border-radius: 10px;
       font-weight: 600;
       font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 500px) {
+      .skills {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Music songs */
+    .songs {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.2);
+      text-align: left;
+    }
+    .songs-title {
+      font-size: .85rem;
+      opacity: .7;
+      margin-bottom: 8px;
+    }
+    .songs ul {
+      list-style: none;
+      padding: 0;
+    }
+    .songs li {
+      font-size: .9rem;
+      padding: 4px 0;
+    }
+    .songs li::before {
+      content: "♪ ";
+      opacity: .6;
     }
 
     /* Footer */
@@ -264,12 +301,32 @@
         <h3>吴青峰 / Wu Qingfeng</h3>
         <p data-lang="zh">细腻的词曲创作，温柔而有力量的嗓音。每一首歌都像一首诗。</p>
         <p data-lang="en">Delicate songwriting with a gentle yet powerful voice. Every song feels like a poem.</p>
+        <div class="songs">
+          <div class="songs-title" data-lang="zh">代表曲目</div>
+          <div class="songs-title" data-lang="en">Featured Songs</div>
+          <ul>
+            <li>小情歌</li>
+            <li>无与伦比的美丽</li>
+            <li>我好想你</li>
+            <li>跟着你到天边</li>
+          </ul>
+        </div>
       </div>
       <div class="music-card">
         <div class="artist-icon">&#127926;</div>
         <h3>周深 / Zhou Shen</h3>
         <p data-lang="zh">空灵清澈的声线，跨越语言与风格的界限。用声音讲述故事。</p>
         <p data-lang="en">An ethereal, crystal-clear voice that transcends languages and genres. Telling stories through sound.</p>
+        <div class="songs">
+          <div class="songs-title" data-lang="zh">代表曲目</div>
+          <div class="songs-title" data-lang="en">Featured Songs</div>
+          <ul>
+            <li>大鱼</li>
+            <li>化身孤岛的鲸</li>
+            <li>Monsters</li>
+            <li>光亮</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
