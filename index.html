@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python - 简洁而强大的编程语言</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1a1a2e;
+      background: #fafafa;
+      line-height: 1.7;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #306998, #FFD43B);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .hero .logo {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: .92;
+    }
+    .hero .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: #fff;
+      color: #306998;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .hero .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    }
+
+    /* Section */
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+    section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 48px;
+      color: #306998;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 36px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,.1);
+    }
+    .card .icon { font-size: 2.4rem; margin-bottom: 16px; }
+    .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #1a1a2e; }
+    .card p { font-size: .95rem; color: #555; }
+
+    /* Code */
+    .code-section {
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 40px 32px;
+      max-width: 720px;
+      margin: 0 auto;
+      color: #e0e0e0;
+      font-family: "Fira Code", "Consolas", monospace;
+      font-size: .95rem;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+    .code-section .comment { color: #6a9955; }
+    .code-section .keyword { color: #c586c0; }
+    .code-section .string { color: #ce9178; }
+    .code-section .func { color: #dcdcaa; }
+    .code-section .builtin { color: #4ec9b0; }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .stat-item .num {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #306998;
+    }
+    .stat-item .label {
+      font-size: .95rem;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* Use Cases */
+    .use-cases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .use-tag {
+      background: linear-gradient(135deg, #306998, #4b8bbe);
+      color: #fff;
+      text-align: center;
+      padding: 24px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+      font-size: .9rem;
+    }
+    footer a { color: #306998; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="logo">&#128013;</div>
+    <h1>Python</h1>
+    <p>简洁、优雅、强大。Python 是世界上最受欢迎的编程语言之一，让编程变得简单而有趣。</p>
+    <a href="https://www.python.org/" class="btn" target="_blank">访问官网</a>
+  </div>
+
+  <!-- Features -->
+  <section>
+    <h2>为什么选择 Python？</h2>
+    <div class="features">
+      <div class="card">
+        <div class="icon">&#128640;</div>
+        <h3>易于学习</h3>
+        <p>语法接近自然英语，清晰直观。非常适合编程初学者入门，也能满足专业开发者的需求。</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128230;</div>
+        <h3>丰富的生态</h3>
+        <p>拥有超过 40 万个第三方库，覆盖 Web 开发、数据分析、人工智能、自动化等各个领域。</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#127758;</div>
+        <h3>跨平台</h3>
+        <p>一次编写，处处运行。支持 Windows、macOS、Linux 等主流操作系统，无需修改代码。</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#129309;</div>
+        <h3>活跃社区</h3>
+        <p>全球数百万开发者组成的社区，丰富的文档、教程和开源项目，遇到问题总能找到答案。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Example -->
+  <section>
+    <h2>代码示例</h2>
+    <div class="code-section">
+      <span class="comment"># 一个简单的 Python 程序</span><br><br>
+      <span class="keyword">def</span> <span class="func">greet</span>(name):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">f"你好, {name}! 欢迎来到 Python 的世界。"</span><br><br>
+      <span class="comment"># 列表推导式 —— 简洁而优雅</span><br>
+      squares = [x ** <span class="builtin">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="builtin">range</span>(<span class="builtin">10</span>)]<br><br>
+      <span class="builtin">print</span>(greet(<span class="string">"开发者"</span>))<br>
+      <span class="builtin">print</span>(squares)
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section>
+    <h2>Python 的影响力</h2>
+    <div class="stats">
+      <div class="stat-item">
+        <div class="num">#1</div>
+        <div class="label">TIOBE 编程语言指数</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">15M+</div>
+        <div class="label">全球开发者</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">400K+</div>
+        <div class="label">PyPI 包数量</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">34</div>
+        <div class="label">年历史 (1991)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section>
+    <h2>应用领域</h2>
+    <div class="use-cases">
+      <div class="use-tag">&#129302; 人工智能 & 机器学习</div>
+      <div class="use-tag">&#128202; 数据分析 & 可视化</div>
+      <div class="use-tag">&#127760; Web 后端开发</div>
+      <div class="use-tag">&#128268; 网络爬虫</div>
+      <div class="use-tag">&#128295; 自动化运维</div>
+      <div class="use-tag">&#128272; 网络安全</div>
+      <div class="use-tag">&#127918; 游戏开发</div>
+      <div class="use-tag">&#128200; 量化交易</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Python 是 <a href="https://www.python.org/psf/" target="_blank">Python Software Foundation</a> 的注册商标</p>
+    <p style="margin-top:8px;">用热爱构建 &hearts;</p>
+  </footer>
+
+</body>
+</html>
