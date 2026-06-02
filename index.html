@@ -762,6 +762,14 @@
     .music-card .songs li:hover::before {
       transform: scale(2);
     }
+    .music-card .songs li a {
+      color: inherit;
+      text-decoration: none;
+      transition: color .3s;
+    }
+    .music-card .songs li a:hover {
+      color: var(--accent);
+    }
 
     /* accent colors per card */
     .music-card.wu { border-color: #d4a85315; }
@@ -1030,10 +1038,10 @@
         <div class="songs-label" data-lang="zh">代表曲目</div>
         <div class="songs-label" data-lang="en">Featured</div>
         <ul class="songs">
-          <li>小情歌</li>
-          <li>无与伦比的美丽</li>
-          <li>我好想你</li>
-          <li>未了</li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/003XqVh92WJEFE" target="_blank" style="color: inherit; text-decoration: none;">小情歌</a></li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/000VUpKo2hBKhR" target="_blank" style="color: inherit; text-decoration: none;">无与伦比的美丽</a></li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/004Hy0mj2EEvtO" target="_blank" style="color: inherit; text-decoration: none;">我好想你</a></li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/000uTvvt1rbOQz" target="_blank" style="color: inherit; text-decoration: none;">未了</a></li>
         </ul>
       </div>
       <div class="music-card zhou reveal reveal-right reveal-delay-2">
