@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZBL — Personal Website</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -30,6 +31,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
       scrollbar-width: thin;
       scrollbar-color: var(--text-dim) var(--bg);
     }
@@ -207,6 +209,7 @@
       position: relative;
       padding: 120px 24px 80px;
       overflow: hidden;
+      scroll-snap-align: start;
     }
 
     /* Floating gradient orbs */
@@ -431,6 +434,11 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 100px 32px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      scroll-snap-align: start;
     }
 
     .section-label {
@@ -660,6 +668,20 @@
       transform: scale(1.15) rotate(8deg);
     }
 
+    .music-card .artist-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 2px solid #ffffff10;
+      transition: transform .6s cubic-bezier(.34,1.56,.64,1), box-shadow .4s;
+    }
+    .music-card:hover .artist-photo {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px var(--accent-glow);
+    }
+
     /* Vinyl record decoration */
     .music-card .vinyl {
       position: absolute;
@@ -823,6 +845,11 @@
       padding: 60px 24px 40px;
       border-top: 1px solid #ffffff06;
       position: relative;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     footer .footer-line {
       font-family: var(--serif);
@@ -876,7 +903,7 @@
       nav { padding: 16px 20px; }
       nav.scrolled { padding: 12px 20px; }
       .nav-links { display: none; }
-      section { padding: 72px 20px; }
+      section { padding: 72px 20px; min-height: 100vh; }
       .about-grid { grid-template-columns: 1fr; }
       .music-grid { grid-template-columns: 1fr; }
       .nav-right { gap: 12px; }
@@ -1030,7 +1057,7 @@
     <div class="music-grid">
       <div class="music-card wu reveal reveal-left reveal-delay-1">
         <div class="vinyl"></div>
-        <div class="artist-icon">&#127908;</div>
+        <img class="artist-photo" src="images/wuqingfeng.png" alt="吴青峰">
         <h3>吴青峰</h3>
         <span class="artist-en">Wu Qingfeng</span>
         <p class="desc" data-lang="zh">细腻的词曲创作，温柔而有力量的嗓音。每一首歌都像一首诗。</p>
@@ -1046,7 +1073,7 @@
       </div>
       <div class="music-card zhou reveal reveal-right reveal-delay-2">
         <div class="vinyl"></div>
-        <div class="artist-icon">&#127926;</div>
+        <img class="artist-photo" src="images/zhoushen.png" alt="周深">
         <h3>周深</h3>
         <span class="artist-en">Zhou Shen</span>
         <p class="desc" data-lang="zh">空灵清澈的声线，跨越语言与风格的界限。用声音讲述故事。</p>
@@ -1054,10 +1081,10 @@
         <div class="songs-label" data-lang="zh">代表曲目</div>
         <div class="songs-label" data-lang="en">Featured</div>
         <ul class="songs">
-          <li>大鱼</li>
-          <li>化身孤岛的鲸</li>
-          <li>Monsters</li>
-          <li>光亮</li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/004OQ5Mt0EmEzv" target="_blank" style="color: inherit; text-decoration: none;">大鱼</a></li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/0004adDk3wsULz" target="_blank" style="color: inherit; text-decoration: none;">化身孤岛的鲸</a></li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/004IQQao12ptH0" target="_blank" style="color: inherit; text-decoration: none;">Monsters</a></li>
+          <li><a href="https://y.qq.com/n/ryqq_v2/songDetail/001nWLsE4VJqC9" target="_blank" style="color: inherit; text-decoration: none;">光亮</a></li>
         </ul>
       </div>
     </div>
